@@ -24,7 +24,7 @@ jobs:
       run: docker build . --file Dockerfile --tag bsalunke/test-github-action:1.0
     - name: Docker Push
       run: docker push bsalunke/test-github-action:1.0  
-    - uses: actions/test-cs-action@v1.0.0
+    - uses: actions/test-cs-action@v1.0
       with: 
         image: bsalunke/test-github-action:1.0
         purl: ${{secrets.PURL}}
