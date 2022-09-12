@@ -19,6 +19,6 @@ jobs:
     - name: Push to docker hub  
       uses: AhnSeongHyun/action-tag-docker-build-push@v1.0.0
       with:
-          repo_name: bsalunke/test-github-action:1.0
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          INPUT_REPO_NAME: bsalunke/test-github-action:1.0
+          INPUT_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          INPUT_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
