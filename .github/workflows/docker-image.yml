@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag bsalunke/test-github-action:1.0; echo '${{ secrets.DOCKER_USERNAME.DOCKER_USERNAME }}'
+      run: docker build . --file Dockerfile --tag bsalunke/test-github-action:1.0; echo ${{ secrets.DOCKER_USERNAME }}
     - name: Push To quay.io
       id: push-to-quay
       uses: redhat-actions/push-to-registry@v2
